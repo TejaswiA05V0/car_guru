@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Guru</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="./images/logo.jpg
+                    " alt="Car Guru Logo">
+            </div>
+            <!-- MENU -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#cars">Cars</a></li>
+
+                <li><a href="#places">Places</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+                <li><a href="#about">About Us</a></li>
+            </ul>
+
+            <!-- BUTTON -->
+            <button class="book-btn" onclick="showPopup()">
+                Book Now
+            </button>
+
+            <!-- MENU ICON -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <h1>Travel Across Telangana & Andhra Pradesh</h1>
+
+            <p>
+                Safe • Comfortable • Affordable Tourist Car Services
+            </p>
+
+            <h2>Starting at ₹11/KM Only</h2>
+
+            <button>Explore Cars</button>
+        </div>
+
+    </section>
+
+    <!-- CARS SECTION -->
+
+    <section class="cars" id="cars">
+
+        <h1 class="section-title">Our Cars</h1>
+
+        <div class="car-container">
+
+            <!-- CAR 1 -->
+            <div class="car-card" onclick="selectCar('Swift- 4 Seater')">
+
+                <img src="images/swift.jpg" alt="Swift">
+
+                <h2>Swift</h2>
+
+                <p>4 Seater • AC Available</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+
+            <!-- CAR 2 -->
+            <div class="car-card" onclick="selectCar('Swift Dzire - 7 Seater')">
+                <img src="images/swift dzire.jpg" alt="Swift Dzire">
+
+                <h2>Swift Dzire</h2>
+
+                <p>7 Seater • Comfortable Sedan</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+
+            <!-- CAR 3 -->
+            <div class="car-card" onclick="selectCar('Breeza - 5 Seater')">
+
+                <img src="images/breeza.jpg" alt="Brezza">
+
+                <h2>Brezza</h2>
+
+                <p>5 Seater • SUV</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+
+            <!-- CAR 4 -->
+            <div class="car-card" onclick="selectCar('Ertiga - 6/7 Seater')">
+
+                <img src="images/ertiga.jpg" alt="Ertiga">
+
+                <h2>Ertiga</h2>
+
+                <p>6/7 Seater • Family Tour Vehicle</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+            <!-- CAR 5 -->
+            <div class="car-card" onclick="selectCar('Honda Amaze - 4 Seater')">
+                <img src="images/honda amaze.jpg" alt="Honda Amaze">
+
+                <h2>Honda Amaze</h2>
+
+                <p>4 Seater • Premium Sedan</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+
+            <!-- CAR 6 -->
+            <div class="car-card" onclick="selectCar('Honda city - 5 Seater')">
+                <img src="images/honda city.jpg" alt="Honda City">
+
+                <h2>Honda City</h2>
+
+                <p>5 Seater • Luxury Sedan</p>
+
+                <h3>₹11/KM</h3>
+
+                <button>Book Now</button>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TEMPLE DESTINATIONS -->
+
+    <section class="temples" id="places">
+
+        <h1 class="section-title">Popular Temple Destinations</h1>
+
+        <div class="temple-container">
+
+            <!-- TEMPLE 1 -->
+            <div class="temple-card" onclick="selectTemple('13.6288,79.4192')">
+                <img src="images/tirupati.jpg" alt="Tirupati">
+
+                <h2>Tirupati</h2>
+
+                <p>Comfortable spiritual family tours.</p>
+
+                <button>Book Trip</button>
+            </div>
+
+            <!-- TEMPLE 2 -->
+            <div class="temple-card" onclick="selectTemple('12.2266,79.0747')">
+
+                <img src="images/arunachalam.jpg" alt="Arunachalam">
+
+                <h2>Arunachalam</h2>
+
+                <p>Peaceful spiritual temple tour package.</p>
+
+                <button>
+                    Book Now
+                </button>
+
+            </div>
+            <!-- TEMPLE 3 -->
+            <div class="temple-card" onclick="selectTemple('16.0728,78.8687')">
+                <img src="images/srisailam.jpg" alt="Srisailam">
+
+                <h2>Srisailam</h2>
+
+                <p>Premium travel for pilgrims.</p>
+
+                <button>Book Trip</button>
+            </div>
+            <!-- TEMPLE 4 -->
+            <div class="temple-card" onclick="selectTemple('13.2476,79.1004')">
+                <img src="images/kanipakam.jpg" alt="Kanipakam">
+
+                <h2>Kanipakam</h2>
+
+                <p>Comfortable family temple tours.</p>
+
+                <button>Book Trip</button>
+            </div>
+
+            <!-- TEMPLE 5 -->
+            <div class="temple-card" onclick="selectTemple('17.5833,78.9431')">
+                <img src="images/yadagirigutta.jpg" alt="Yadagirigutta">
+
+                <h2>Yadagirigutta</h2>
+
+                <p>Safe and peaceful pilgrimage travel.</p>
+
+                <button>Book Trip</button>
+            </div>
+
+            <!-- TEMPLE 6 -->
+            <div class="temple-card" onclick="selectTemple('17.2629,78.6850')">
+                <img src="images/swarnagiri.jpg" alt="Swarnagiri">
+
+                <h2>Swarnagiri</h2>
+
+                <p>Premium spiritual travel experience.</p>
+
+                <button>Book Trip</button>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- BOOKING SECTION -->
+
+    <section class="booking" id="booking">
+
+        <h1 class="section-title">
+            Book Your Trip
+        </h1>
+
+        <div class="booking-container">
+
+            <form id="bookingForm">
+
+                <!-- NAME -->
+
+                <input type="text" placeholder="Enter Your Name" required>
+
+                <!-- PHONE -->
+
+                <input type="tel" placeholder="Phone Number" required>
+
+                <!-- SELECT CAR -->
+
+                <select id="car">
+
+                    <option>Select Car</option>
+
+                    <option>Swift Dzire - 4 Seater</option>
+
+                    <option>Honda Amaze - 4 Seater</option>
+
+                    <option>Ertiga - 6 Seater</option>
+
+                    <option>Breeza - 5 Seater</option>
+
+                    <option>Swift - 4 Seater</option>
+
+                    <option>Innova - 7 Seater</option>
+
+                    <option>Kia Carens - 6 Seater</option>
+
+                    <option>Mahindra XUV700 - 7 Seater</option>
+
+                </select>
+
+                <select id="place">
+
+                    <option value="">Select Temple Tour</option>
+
+                    <option value="13.6288,79.4192">
+                        Tirupati
+                    </option>
+
+                    <option value="12.2266,79.0747">
+                        Arunachalam
+                    </option>
+
+                    <option value="16.0728,78.8687">
+                        Srisailam
+                    </option>
+
+                    <option value="13.2476,79.1004">
+                        Kanipakam
+                    </option>
+
+                    <option value="17.5833,78.9431">
+                        Yadadri
+                    </option>
+
+                    <option value="17.2629,78.6850">
+                        Swarnagiri
+                    </option>
+
+                    <option value="17.6688,80.8880">
+                        Bhadrachalam
+                    </option>
+
+                    <option value="18.8791,77.9986">
+                        Basara
+                    </option>
+
+                    <option value="17.0886,82.1030">
+                        Annavaram
+                    </option>
+
+                </select>
+                <div class="price-box">
+                    <p>Booking ID: <span id="bookingId"></span></p>
+                    <p>Pickup Location: <span id="pickup"></span></p>
+                    <p id="status">Select a destination</p>
+                    Distance:
+                    <span id="distance">0</span> KM
+
+                </div>
+                <!-- TOTAL PRICE -->
+
+                <div class="price-box">
+
+                    Total Price:
+                    ₹<span id="price">0</span>
+
+                </div>
+                <div class="payment-box">
+
+                    <h3>Select Payment Method</h3>
+
+                    <button type="button">
+                        Google Pay
+                    </button>
+
+                    <button type="button">
+                        PhonePe
+                    </button>
+
+                    <button type="button">
+                        Paytm
+                    </button>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button type="button" onclick="confirmBooking()">
+                    Confirm Booking
+                </button>
+                <div id="confirmationCard" class="confirmation-card">
+
+                    <h2>Booking Confirmed ✅</h2>
+
+                    <p id="confirmBookingId"></p>
+
+                    <p id="confirmPlace"></p>
+
+                    <p id="confirmDistance"></p>
+
+                    <p id="confirmPrice"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    </div>
+
+    <!-- REVIEWS SECTION -->
+
+    <section class="reviews">
+
+        <h1 class="section-title">Customer Reviews</h1>
+
+        <div class="review-container">
+
+            <!-- REVIEW 1 -->
+            <div class="review-card">
+
+                <h2>Ramesh Kumar</h2>
+
+                <p>
+                    Excellent service for Tirupati trip.
+                    Clean car and friendly driver.
+                </p>
+
+                <h3>★★★★★</h3>
+
+            </div>
+
+            <!-- REVIEW 2 -->
+            <div class="review-card">
+
+                <h2>Priya Sharma</h2>
+
+                <p>
+                    Comfortable family travel experience.
+                    Affordable pricing and safe journey.
+                </p>
+
+                <h3>★★★★★</h3>
+
+            </div>
+
+            <!-- REVIEW 3 -->
+            <div class="review-card">
+
+                <h2>Suresh Reddy</h2>
+
+                <p>
+                    Best temple tourism service in Telangana.
+                    Highly recommended.
+                </p>
+
+                <h3>★★★★★</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ABOUT US SECTION -->
+
+    <section class="about" id="about">
+
+        <h1 class="section-title">About Us</h1>
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h2>Your Trusted Temple Travel Partner</h2>
+
+                <p>
+                    Car Guru provides safe, comfortable and affordable
+                    tourist car services across Telangana and Andhra Pradesh.
+                    We specialize in temple tourism and family travel with
+                    experienced drivers and well-maintained vehicles.
+                </p>
+
+                <p>
+                    We offer ALL INDIA PERMIT tourist vehicles at affordable
+                    pricing starting from ₹11 per kilometer.
+                </p>
+
+                <p>
+                    Our mission is to make every spiritual journey peaceful,
+                    safe and memorable for families and travelers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- BOOKING POPUP -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-content">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>Booking Request Sent!</h2>
+
+            <p>
+                Our Car Guru team will contact you shortly.
+            </p>
+
+            <button onclick="closePopup()">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="section-title">
+            Contact Us
+        </h1>
+
+        <div class="contact-container">
+
+            <div class="contact-box">
+
+                <h2>Car Guru Travels 🚗</h2>
+
+                <p>
+                    Temple Tour Services Across South India
+                </p>
+
+                <p>
+                    📞 Phone:
+                    +91 9866495263
+                </p>
+
+                <p>
+                    📧 Email:
+                    cargurutravels@gmail.com
+                </p>
+
+                <p>
+                    📍 Location:
+                    Hyderabad, Telangana
+                </p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY -->
+            <div class="footer-box">
+
+                <h2>Car Guru</h2>
+
+                <p>
+                    Premium temple tourism and travel services across
+                    Telangana and Andhra Pradesh.
+                </p>
+
+                <h3>₹11/KM Only</h3>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-box">
+
+                <h2>Quick Links</h2>
+
+                <a href="#">Home</a>
+                <a href="#cars">Cars</a>
+                <a href="#places">Temple Tours</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-box">
+
+                <h2>Contact</h2>
+
+                <p>Admin: Tejaswi</p>
+
+                <p>Phone: +91 9866495263</p>
+
+                <p>Email: tejaswidts5@gmail.com</p>
+
+                <p>Location: Telangana, India</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Car Guru | All Rights Reserved
+        </div>
+
+    </footer>
+    <!-- WHATSAPP BUTTON -->
+
+    <a href="https://wa.me/919876543210" class="whatsapp" target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
